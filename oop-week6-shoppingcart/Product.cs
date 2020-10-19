@@ -4,11 +4,16 @@ using System.Text;
 
 namespace oop_week6_shoppingcart
 {
-    public abstract class Product
+    public  class Product
     {
-        double cost { get; set; }
-        string name { get; set; }
+        public double Cost { get; set; }
+        public string Name { get; set; }
 
+        public Product(string name, double cost)
+        {
+            Cost = cost;
+            Name = name;
+        }
 
     }
 }

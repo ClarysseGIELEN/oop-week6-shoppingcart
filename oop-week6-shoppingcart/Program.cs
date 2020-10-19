@@ -14,25 +14,21 @@ namespace oop_week6_shoppingcart
                 //3 for price of 2 on Oranges
                 //And it adds two new item s
                 //Bananas for 15 cent a banana
-                //Chair for 25 euro -- > would be weird to add it as a fruit
+                //Chair for 25 euro 
+                //Create an interface for the coupon thing
 
-            Fruit apple = new Fruit(0.6);
-            Fruit orange = new Fruit(0.25);
-            Fruit banana = new Fruit(0.15);
-            Objet chair = new Objet(25);
-            ArrayList liste = new ArrayList();
-            liste.Add(apple);
-            liste.Add(apple);
-            liste.Add(apple);
-            liste.Add(orange);
+            Product apple = new Product("Apple",0.6);
+            Product orange = new Product("Orange",0.25);
+            Product banana = new Product("Banana",0.15);
+            Product chair = new Product("Chair", 25);
 
+            Cart cart = new Cart();
+            cart.Add(apple);
+            cart.Add(apple);
+            cart.Add(apple);
+            cart.Add(orange);
 
-            //Check-out
-            double total = 0;
-            foreach (Fruit fruit in liste)
-            {
-                total = total + fruit.Cost;
-            }
+            double total = cart.Checkout();
             Console.WriteLine(total);
 
         }

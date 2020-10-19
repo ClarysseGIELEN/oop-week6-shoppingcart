@@ -6,11 +6,10 @@ namespace oop_week6_shoppingcart
 {
     public class Fruit : Product
     {
-        public double Cost;
-        //
-        public Fruit(double cost)
+              
+        public Fruit(string name, double cost) : base(name,cost)
         {
-            this.Cost = cost;
+            
         }
     }
 }
